@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unified Intel Co.</title>
     <link rel="icon" type="image/svg+xml" href="assets/unified-intel-logo-alt.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html, body {
             height: 100%;
@@ -23,19 +24,16 @@
         #top-dot {
             transition: stroke 0.4s ease; /* Smooth color transition */
         }
-        a:hover #top-dot {
-            stroke: #00ff00 !important; /* Lime green on hover */
-        }
         a {
             display: flex; /* Make the link a flex container */
             justify-content: center; /* Center the image horizontally */
             align-items: center; /* Center the image vertically */
-            transition: all 0.4s ease; /* Add transition for all effects */
+            transition: all 0.5s ease; /* Add transition for all effects */
             opacity: 0.8; /* Set initial opacity on the link */
             filter: drop-shadow(0 0 0 transparent); /* Initial state for glow */
         }
         a:hover {
-            transform: scale(1.025); /* Scale link on hover */
+            transform: scale(1.0125); /* Scale link on hover */
             opacity: 1; /* Full opacity on hover */
             filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2)); /* Soft white glow on hover */
         }
@@ -55,5 +53,31 @@
             </g>
         </svg>
     </a>
+    <script>
+        // Tailwind colors (400-500 range for less saturation)
+        const colors = [
+            '#34d399', // emerald-400
+            '#60a5fa', // blue-400
+            '#f87171', // red-400
+            '#a78bfa', // violet-400
+            '#fbbf24', // amber-400
+            '#2dd4bf', // teal-400
+            '#fb923c', // orange-400
+            '#c084fc', // purple-400
+            '#fb7185', // rose-400
+            '#22d3ee'  // cyan-400
+        ];
+        const link = document.querySelector('a');
+        const dot = document.getElementById('top-dot');
+
+        link.addEventListener('mouseenter', () => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            dot.style.stroke = randomColor;
+        });
+
+        link.addEventListener('mouseleave', () => {
+            dot.style.stroke = '#ffffff';
+        });
+    </script>
 </body>
 </html>
