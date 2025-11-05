@@ -16,8 +16,10 @@
             overflow: hidden; /* Prevent scrollbars if logo is large */
         }
         img {
-            width: 33.3333vw; /* Display logo at one-third viewport width */
-            max-height: 70vh; /* Prevent logo from exceeding screen height */
+            max-width: 33.3333vw; /* Limit to one-third viewport width */
+            max-height: 33.3333vh; /* Limit to one-third viewport height */
+            width: auto; /* Maintain aspect ratio */
+            height: auto; /* Maintain aspect ratio */
             display: block; /* Remove extra space below image */
             /* Removed transition and opacity from img */
         }
