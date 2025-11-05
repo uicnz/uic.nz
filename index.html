@@ -14,7 +14,6 @@
             display: flex;
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
-            overflow: hidden; /* Prevent scrollbars if logo is large */
         }
         img {
             width: 33.3333vw; /* Display logo at one-third viewport width */
@@ -27,12 +26,14 @@
             display: flex; /* Make the link a flex container */
             justify-content: center; /* Center the image horizontally */
             align-items: center; /* Center the image vertically */
-            transition: 0.4s; /* Add transition for scaling effect to the link */
+            transition: all 0.4s ease; /* Add transition for all effects */
             opacity: 0.8; /* Set initial opacity on the link */
+            filter: drop-shadow(0 0 0 transparent); /* Initial state for glow */
         }
         a:hover {
             transform: scale(1.025); /* Scale link on hover */
             opacity: 1; /* Full opacity on hover */
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2)); /* Soft white glow on hover */
         }
     </style>
 </head>
