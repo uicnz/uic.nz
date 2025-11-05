@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIC</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Black background */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            overflow: hidden; /* Prevent scrollbars if logo is large */
+        }
+        img {
+            width: 33.3333vw; /* Display logo at one-third viewport width */
+            max-height: 70vh; /* Prevent logo from exceeding screen height */
+            display: block; /* Remove extra space below image */
+            /* Removed transition and opacity from img */
+        }
+        /* Removed img:hover rule */
+        a {
+            display: flex; /* Make the link a flex container */
+            justify-content: center; /* Center the image horizontally */
+            align-items: center; /* Center the image vertically */
+            transition: 0.3s; /* Add transition for scaling effect to the link */
+            opacity: 0.9; /* Set initial opacity on the link */
+        }
+        a:hover {
+            transform: scale(1.1); /* Scale link on hover */
+            opacity: 1; /* Full opacity on hover */
+        }
+    </style>
+</head>
+<body>
+    <a href="https://x.com/uicnz" target="_blank" rel="noopener noreferrer">
+        <img src="assets/airpilot-white-black-alt.svg" alt="UIC Logo">
+    </a>
+</body>
+</html>
